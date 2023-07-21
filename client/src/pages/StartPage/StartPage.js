@@ -1,7 +1,7 @@
 const StartPage = () => {
   return (
     <div>StartPage</div>
-  )
-}
+  );
+};
 
-export default StartPage
+export default StartPage;
