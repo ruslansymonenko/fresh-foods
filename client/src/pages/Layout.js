@@ -5,7 +5,7 @@ import StartPage from './StartPage/StartPage';
 import Header from '../components/Header/Header';
 
 const Layout = () => {
-  const isFirstEntering = false;
+  const isFirstEntering = true;
 
   return (
     isFirstEntering ? (

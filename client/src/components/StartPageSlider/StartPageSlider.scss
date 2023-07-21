@@ -1,0 +1,54 @@
+@import '../../scss/_variables.scss';
+
+.start-slider{
+  position: relative;
+  height: 100vh;
+
+  &__images{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__images-item{
+    width: 100%;
+    filter: brightness(60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: $main-font-color;
+  }
+
+  &__text{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 500px;
+  }
+
+  &__text-header{
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+
+  &__text-semiheader{
+    font-size: 20px;
+    font-weight: 400;
+    color: $minor-font-color;
+  }
+}
+
+.start-slider__images-item.active {
+  opacity: 1;
+  width: 100%;
+}

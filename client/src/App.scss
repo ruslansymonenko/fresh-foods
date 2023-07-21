@@ -1,18 +1,8 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000000;
+@import './scss/_global.scss';
+
+
+.App{
+  min-height: 100vh;
 }
 
-//-------Global
 
-.app-container{
-
-}
-
-.container{
-    max-width: 960px; 
-    margin: 0 auto; 
-    padding: 0px 20px;
-}
