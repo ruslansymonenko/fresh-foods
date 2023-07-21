@@ -1,6 +1,12 @@
+import './StartPage.scss';
+
 const StartPage = () => {
   return (
-    <div>StartPage</div>
+    <div className="start">
+      <div className="container">
+        <div className="start-content">Start page</div>
+      </div>
+    </div>
   );
 };
 
