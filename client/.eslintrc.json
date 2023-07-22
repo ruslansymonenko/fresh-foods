@@ -19,12 +19,13 @@
         "no-console": "warn",
         "quotes": ["error", "single"],
         "jsx-quotes": ["error", "prefer-double"],
-        "prefer-const": "error",
+        "prefer-const": "off",
         "semi": ["warn", "always"],
         "comma-dangle": ["warn", {
             "objects": "always"
         }],
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": "off"
     }
 }

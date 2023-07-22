@@ -12,12 +12,15 @@
 
   &__images-item{
     width: 100%;
+    height: auto;
     filter: brightness(60%);
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    object-fit: cover;
+    min-height: 100vh;
   }
 
   &__content{
@@ -33,7 +36,7 @@
     position: absolute;
     top: 45%;
     left: 10%;
-    width: 500px;
+    width: 40%;
   }
 
   &__text-header{
@@ -48,14 +51,106 @@
   }
 
   &__skip{
+    font-weight: 300;
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    border: none;
+    background-color: transparent;
+    color: $minor-font-color;
+    font-size: 20px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      border-radius: 3px;
+      background: white;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      border-radius: 3px;
+      background: $main-accent;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+    
+    &:hover{
+      color: $main-accent;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__control{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    bottom: 15%;
+    right: 15%;
   }
 }
 
 .start-slider__images-item.active {
   opacity: 1;
   width: 100%;
+}
+
+
+
+
+//------------Adaptive
+
+@media (max-width: 970px) {
+  .start-slider{
+    &__text-header{
+      font-size: 35px;
+    }
+
+    &__text-semiheader{
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .start-slider {
+    &__text{
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .start-slider {
+    &__text {
+      width: 70%;
+    }
+    &__text-header {
+      font-size: 25px;
+    }
+
+    &__text-semiheader {
+      font-size: 14px;
+    }
+  }
 }

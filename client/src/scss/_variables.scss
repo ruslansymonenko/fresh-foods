@@ -3,7 +3,10 @@
 $main-font-color: white;
 $minor-font-color: #FCFCFC;
 
+$main-accent: #F48F1D;
+
 :export {
   main-font-color: $main-font-color;
   minor-font-color: $minor-font-color;
+  main-accent: $main-accent;
 }
