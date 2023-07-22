@@ -72,6 +72,10 @@ const StartPageSlider = () => {
                 ) : ''
               ))
           }
+
+          <button className="start-slider__skip">
+            Skip
+          </button>
         </div>
       </div>
     </div>

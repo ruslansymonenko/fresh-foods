@@ -46,6 +46,13 @@
     font-weight: 400;
     color: $minor-font-color;
   }
+
+  &__skip{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .start-slider__images-item.active {

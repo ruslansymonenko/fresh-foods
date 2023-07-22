@@ -1,7 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-export default configureStore ({
-  reducer: {
+import startPageShowingReudcer from './slices/startPageShowingSlice';
 
+export default configureStore ({
+  reducer: {  
+    startPageShowing: startPageShowingReudcer,
   },
 });

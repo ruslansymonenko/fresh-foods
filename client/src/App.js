@@ -2,12 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 
 import Layout from './pages/Layout.js';
-// import StartPage from './pages/StartPage/StartPage';
-// import HomePage from './pages/HomePage/HomePage';
-// import RegisterPage from './pages/RegisterPage/RegisterPage';
-// import LoginPage from './pages/LoginPage/LoginPage';
-// import MenuPage from './pages/MenuPage/MenuPage';
-// import AboutPage from './pages/AboutPage/AboutPage';
 
 const StartPage = lazy(() => import('./pages/StartPage/StartPage'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
