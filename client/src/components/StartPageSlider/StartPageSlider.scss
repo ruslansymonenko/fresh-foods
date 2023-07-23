@@ -40,6 +40,7 @@
   }
 
   &__text-header{
+    color: white;
     font-size: 45px;
     margin-bottom: 15px;
   }
@@ -47,7 +48,7 @@
   &__text-semiheader{
     font-size: 20px;
     font-weight: 400;
-    color: $minor-font-color;
+    color: $white-font-color;
   }
 
   &__skip{
@@ -58,7 +59,7 @@
     transform: translateX(-50%);
     border: none;
     background-color: transparent;
-    color: $minor-font-color;
+    color: $white-font-color;
     font-size: 20px;
     cursor: pointer;
     transition: ease-in-out 0.3s;

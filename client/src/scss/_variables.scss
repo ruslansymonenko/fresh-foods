@@ -1,9 +1,19 @@
 //-----------Colors
 
-$main-font-color: white;
-$minor-font-color: #FCFCFC;
+$main-font-color: black;
+$minor-font-color: #767676;
+$white-font-color: #FCFCFC;
 
-$main-accent: #F48F1D;
+$main-accent: #ff7675;
+// $main-attention: #ff7675;
+
+//------------Layers
+$Z-INDEX_LEVEL_1: 1;
+$Z-INDEX_LEVEL_2: 5;
+$Z-INDEX_LEVEL_3: 10;
+$Z-INDEX_LEVEL_4: 50;
+$Z-INDEX_LEVEL_4: 100;
+
 
 :export {
   main-font-color: $main-font-color;

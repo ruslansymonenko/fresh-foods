@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const startPageShowingSlice = createSlice({
   name: 'startPageShowing',
   initialState: {
-    isStartPage: true,
+    isStartPage: false,
   },
   reducers: {
     setIsStartPage: (state, action) => {
