@@ -1,0 +1,23 @@
+@import '../../scss/_variables';
+
+.home{
+  position: relative;
+  padding: 10px 0;
+  min-height: calc(100vh - ($header-height + 40px));
+  overflow: hidden;
+
+
+  &-decor__circle{
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    position: absolute;
+  }
+
+  &-decor__tomatoes{
+    height: 100%;
+    top: 8%;
+    right: -4%;
+    position: absolute;
+  }
+}

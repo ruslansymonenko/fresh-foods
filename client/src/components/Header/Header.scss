@@ -1,7 +1,8 @@
 @import '../../scss/_variables';
 
 .header{
-  height: 70px;
+  position: relative;
+  height: $header-height;
   padding: 10px 0;
   z-index: $Z-INDEX_LEVEL_1;
 
