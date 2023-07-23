@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import authReducer from './slices/authSlice';
-import startPageShowingReudcer from './slices/startPageShowingSlice';
+import startPageShowingReducer from './slices/startPageShowingSlice';
 
 export default configureStore ({
   reducer: {  
-    auth: authReducer,
-    startPageShowing: startPageShowingReudcer,
+    authorization: authReducer,
+    startPageShowing: startPageShowingReducer,
   },
 });
