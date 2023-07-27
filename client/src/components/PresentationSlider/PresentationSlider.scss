@@ -1,0 +1,95 @@
+@import '../../scss/_variables';
+
+.presentation-slider{
+  height: 100%;
+  width: 100%;
+  transition: ease .7s;
+
+  &__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__item-img{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 70%;
+    z-index: $Z-INDEX_LEVEL_3;
+  }
+
+  &__item-data{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 45%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 40px 5px 10px;
+    min-height: 150px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 0px rgb(57, 57, 57);
+    background-color: $main-accent;
+  }
+
+  &__item-name{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 30px;
+    min-height: 50px;
+    font-weight: 600;
+    color: $white-font-color;
+    margin-bottom: 10px;
+  }
+
+  &__item-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    align-self: flex-start;
+  }
+
+  &__item-rate{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-rate img {
+    width: 20px;
+  }
+
+  &__item-grade{
+    margin-right: 5px;
+  }
+
+  &__item-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: $main-dark;
+    box-shadow: 1px 1px 3px 0px rgb(57, 57, 57);
+  }
+
+  &__item-time img {
+    height: 40px;
+  }
+
+  &__item-time span {
+    color: $white-font-color;
+    font-weight: 600;
+  }
+}

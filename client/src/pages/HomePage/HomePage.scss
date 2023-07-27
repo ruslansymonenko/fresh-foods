@@ -19,6 +19,8 @@
     justify-content: center;
     width: 50%;
     height: 100%;
+    animation: 0.5s linear showing-sections;
+    z-index: $Z-INDEX_LEVEL_2;
   }
 
   &-title{
@@ -48,6 +50,7 @@
     top: 0%;
     right: 0%;
     position: absolute;
+    z-index: $Z-INDEX_LEVEL_1;
   }
 
   &-decor__tomatoes{
@@ -55,5 +58,28 @@
     top: 8%;
     right: -4%;
     position: absolute;
+    animation: 0.5s linear showing-decor;
+    z-index: $Z-INDEX_LEVEL_1;
+  }
+}
+
+@keyframes showing-decor {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes showing-sections {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

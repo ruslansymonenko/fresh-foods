@@ -1,4 +1,5 @@
 import HomePageOrder from '../../features/HomePageOrder/HomePageOrder';
+import HomePagePresentation from '../../features/HomePagePresentation/HomePagePresentation';
 
 import './HomePage.scss';
 
@@ -23,7 +24,7 @@ const HomePage = () => {
             <HomePageOrder/>
           </div>
           <div className="home-content__section">
-
+            <HomePagePresentation/>
           </div>
         </div>
       </div>
