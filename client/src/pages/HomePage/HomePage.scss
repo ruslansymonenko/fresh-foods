@@ -6,6 +6,42 @@
   min-height: calc(100vh - ($header-height + 40px));
   overflow: hidden;
 
+  &-content {
+    display: flex;
+    margin-top: 15%;
+    height: 600px;
+  }
+
+  &-content__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+  }
+
+  &-title{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &-subtitle{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &-tagline{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
 
   &-decor__circle{
     height: 100%;

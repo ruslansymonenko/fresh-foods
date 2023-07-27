@@ -1,0 +1,40 @@
+@import '../../scss/_variables';
+
+.action-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 140px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: $main-dark;
+  box-shadow: 1px 1px 5px 0px black;
+  cursor: pointer;
+  transition: ease .3s;
+
+  &:hover{
+    transform: scale(1.02);
+  }
+
+  &__img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: $main-accent;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 2px;
+  }
+
+  &__img{
+    height: 20px;
+  }
+
+  &__text{
+    color: white;
+  }
+}
