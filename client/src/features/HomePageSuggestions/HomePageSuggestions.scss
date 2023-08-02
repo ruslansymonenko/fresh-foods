@@ -1,0 +1,20 @@
+.home-suggestions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 400px;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 8px 6px 29px -11px rgba(0, 0, 0, 0.75);
+
+  &__title{
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  &__slider{
+    height: 100%;
+    width: 100%;
+  }
+}

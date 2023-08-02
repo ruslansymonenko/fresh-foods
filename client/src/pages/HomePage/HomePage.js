@@ -1,5 +1,6 @@
 import HomePageOrder from '../../features/HomePageOrder/HomePageOrder';
 import HomePagePresentation from '../../features/HomePagePresentation/HomePagePresentation';
+import HomePageSuggestions from '../../features/HomePageSuggestions/HomePageSuggestions';
 
 import './HomePage.scss';
 
@@ -22,6 +23,7 @@ const HomePage = () => {
               Fresh Foods Cafe: A Culinary Journey with best dishes!
             </h3>
             <HomePageOrder/>
+            <HomePageSuggestions/>
           </div>
           <div className="home-content__section">
             <HomePagePresentation/>
