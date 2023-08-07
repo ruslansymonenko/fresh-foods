@@ -18,6 +18,13 @@ $Z-INDEX_LEVEL_4: 100;
 
 $header-height: 70px;
 
+@mixin page ($headerHeight) {
+  position: relative;
+  padding: 10px 0;
+  min-height: calc(100vh - ($header-height + 40px));
+  overflow: hidden;
+}
+
 
 :export {
   main-font-color: $main-font-color;

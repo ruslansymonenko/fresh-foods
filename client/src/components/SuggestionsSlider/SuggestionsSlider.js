@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import './SuggestionsSlider.scss';
 
@@ -22,10 +22,6 @@ const SuggestionsSlider = ({ suggestions }) => {
       setCurrentSlide(suggestions.length - 1);
     }
   };
-
-  useEffect(() => {
-    console.log(currentSlide);
-  }, [currentSlide]);
 
   return (
     <div className="suggestions-slider">
