@@ -1,4 +1,8 @@
+import ContactForm from '../../features/ContactForm/ContactForm';
+
 import './AboutPage.scss';
+
+import aboutImage from '../../assets/about-page-images/about-page-img.jpg';
 
 const AboutPage = () => {
   return (
@@ -37,7 +41,8 @@ const AboutPage = () => {
             </ul>
           </div>
           <div className="about-section">
-            
+            <img className="about-image" src={aboutImage} alt="food image" />
+            <ContactForm/>
           </div>
         </div>
       </div>
