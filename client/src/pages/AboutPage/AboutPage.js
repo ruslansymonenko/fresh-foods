@@ -42,7 +42,9 @@ const AboutPage = () => {
           </div>
           <div className="about-section">
             <img className="about-image" src={aboutImage} alt="food image" />
-            <ContactForm/>
+            <div className="about-form">
+              <ContactForm/>
+            </div>
           </div>
         </div>
       </div>
