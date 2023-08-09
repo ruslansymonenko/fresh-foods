@@ -3,11 +3,15 @@ import React, { useState, useEffect } from 'react';
 import DataInput from '../../components/DataInput/DataInput';
 import Button from '../../components/Button/Button';
 
+import {nameValidation} from '../../helpers/dataValidation';
+
 import './ContactForm.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [isNameCorrect, setIsNameCorrect] = useState('');
+  const [isEmailCorrect, setIsEmailCorrect] = useState('');
 
   const handleNameChange = (newName) => {
     setName(newName);
@@ -17,15 +21,29 @@ const ContactForm = () => {
     setEmail(newEmail);
   };
 
+  const checkValidationsResult = () => {
+    const checkName = nameValidation(name);
+    if (checkName.result === 'error') {
+      console.log(checkName.message);
+      setIsNameCorrect(checkName.result);
+    } else if (checkName.result === 'success') {
+      setIsNameCorrect(checkName.result);
+      console.log(checkName.message);
+    }
+  };
+
   const handleSubmit = () => {
-    console.log('form submit');
-    handleClearInputs();
+    checkValidationsResult();
   };
 
   const handleClearInputs = () => {
     setName('');
     setEmail('');
   };
+
+  useEffect(() => {
+
+  }, [isNameCorrect, isEmailCorrect]);
 
   return (
     <form 
@@ -39,14 +57,14 @@ const ContactForm = () => {
         <DataInput
           type={'text'}
           placeholderText={'Your name'}
-          status={''}
+          status={isNameCorrect}
           value={name}
           onValueChange={handleNameChange}
         />
         <DataInput
           type={'email'}
           placeholderText={'Your Email'}
-          status={''}
+          status={isEmailCorrect}
           value={email}
           onValueChange={handleEmailChange}
         />
