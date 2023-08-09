@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import Button from '../Button/Button';
+
 import './Header.scss';
 
 import mainLogoImage from '../../assets/icons/main-logo.png';
@@ -57,7 +59,9 @@ const Header = () => {
             <img className="header-search__image" src={searchImage} alt="search" />
           </div>
           <div className="header-btns">
-            <button className="header-btns__btn header-btns__btn-signin">
+            <Button 
+              classes={'header-btns__btn header-btns__btn-signin'}
+            >
               <Link 
                 className="header-btns__btn-link"
                 to={'register'}
@@ -67,13 +71,15 @@ const Header = () => {
                   Sign in
                 </span>
               </Link>
-            </button>
-            <button className="header-btns__btn header-btns__btn-logout">
+            </Button>
+            <Button
+              classes={'header-btns__btn header-btns__btn-logout'}
+            >
               <img className="header-btns__btn-image" src={logOutImage} alt="sign in" />
               <span className="header-btns__btn-text">
                 Sign in
               </span>
-            </button>
+            </Button>
           </div>
         </div>
       </div>
