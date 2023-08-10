@@ -2,9 +2,9 @@ import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { useSelector } from 'react-redux';
 
-import StartPage from './StartPage/StartPage';
+import StartPage from '../pages/StartPage/StartPage';
 
-import Header from '../components/Header/Header';
+import Header from './Header/Header';
 
 const Layout = () => {
   const isStartPage = useSelector((state) => state.startPageShowing.isStartPage);

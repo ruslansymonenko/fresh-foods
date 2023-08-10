@@ -1,4 +1,4 @@
-import ContactForm from '../../features/ContactForm/ContactForm';
+import ContactForm from '../../containers/ContactForm/ContactForm';
 
 import './AboutPage.scss';
 

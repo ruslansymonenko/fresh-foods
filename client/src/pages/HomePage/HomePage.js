@@ -1,6 +1,6 @@
-import HomePageOrder from '../../features/HomePageOrder/HomePageOrder';
-import HomePagePresentation from '../../features/HomePagePresentation/HomePagePresentation';
-import HomePageSuggestions from '../../features/HomePageSuggestions/HomePageSuggestions';
+import HomePageOrder from '../../containers/HomePageOrder/HomePageOrder';
+import HomePagePresentation from '../../containers/HomePagePresentation/HomePagePresentation';
+import HomePageSuggestions from '../../containers/HomePageSuggestions/HomePageSuggestions';
 
 import './HomePage.scss';
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 
 import './Header.scss';
 
@@ -77,7 +77,7 @@ const Header = () => {
             >
               <img className="header-btns__btn-image" src={logOutImage} alt="sign in" />
               <span className="header-btns__btn-text">
-                Sign in
+                Log out
               </span>
             </Button>
           </div>
