@@ -1,4 +1,5 @@
 @import "../../scss//_variables";
+@import "../../scss/animations";
 
 .about {
   @include page($header-height);
@@ -16,6 +17,7 @@
     justify-content: center;
     width: 50%;
     height: 100%;
+    animation: 0.5s linear showing-sections;
   }
 
   &-title{
