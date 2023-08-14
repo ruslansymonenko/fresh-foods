@@ -1,0 +1,13 @@
+@import "../../scss//_variables";
+@import "../../scss/animations";
+
+.menu{
+  @include page($header-height);
+
+  &-controllers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

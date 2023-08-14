@@ -40,7 +40,7 @@ const ContactForm = () => {
     }
   };
 
-
+  //Send info to the server
   const handleSubmit = () => {
     const formValidation = contactFormValidation(name, email);
     if(formValidation.validation === false) {

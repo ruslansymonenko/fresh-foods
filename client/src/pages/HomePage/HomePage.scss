@@ -3,6 +3,7 @@
 
 .home{
   @include page($header-height);
+  overflow: hidden;
 
   &-content {
     display: flex;

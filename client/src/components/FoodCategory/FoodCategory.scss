@@ -1,0 +1,14 @@
+.food-category{
+  height: 110px;
+  // min-width: 110px;
+  // max-width: 110px;
+  box-shadow: 1px 1px 14px -6px black;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
