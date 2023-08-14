@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { UseSelector, useDispatch } from 'react-redux';
 
 import DataInput from '../../components/DataInput/DataInput';
 import Button from '../../components/Button/Button';
 
-// import {nameValidation} from '../../helpers/dataValidation';
-import DataValidation from '../../helpers/dataValidation';
+import contactFormValidation from '../../helpers/contactFormValidation';
 
 import './ContactForm.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [isNameCorrect, setIsNameCorrect] = useState('');
-  const [isEmailCorrect, setIsEmailCorrect] = useState('');
-  const [isFormVaid, setIsFormValid] = useState({
-    status: false,
-    message: '',
-  });
-
-  const validation = new DataValidation();
+  const [nameInputStatus, setNameInputStatus] = useState('');
+  const [emailInputStatus, setEmailInputStatus] = useState('');
 
   const handleNameChange = (newName) => {
     setName(newName);
@@ -28,81 +22,42 @@ const ContactForm = () => {
     setEmail(newEmail);
   };
 
-    const updateFormStatus = (newStatus) => {
-    setIsFormValid((prevFormValidity) => ({
-      ...prevFormValidity,
-      status: newStatus,
-    }));
-  };
-
-  const updateFormMessage = (newMessage) => {
-    setIsFormValid((prevFormValidity) => ({
-      ...prevFormValidity,
-      message: newMessage,
-    }));
-  };
-
-  const checkValidationData = (type, value, func) => {
-    let checkingValue;
-
-    if (type === 'name') {
-      checkingValue = validation.nameValidation(value);
-    } else if (type === 'email') {
-      checkingValue = validation.emailValidation(value);
-    } else {
-      return;
-    }
-
-    if (checkingValue.result === 'error') {
-      func(checkingValue.result);
-    } else if (checkingValue.result === 'success') {
-      func(checkingValue.result);
+  const showInputError = (type) => {
+    switch (type) {
+      case 'name':
+        setNameInputStatus('error');
+        break
+      case 'email': 
+        setEmailInputStatus('error');
+        break
+      case 'all':
+        setNameInputStatus('error');
+        setEmailInputStatus('error');
+        break;
+      default:
+        setNameInputStatus('');
+        setEmailInputStatus('');
     }
   };
 
-  // const checkValidationName = () => {
-  //   const checkName = validation.nameValidation(name);
-  //   if (checkName.result === 'error') {
-  //     setIsNameCorrect(checkName.result);
-  //   } else if (checkName.result === 'success') {
-  //     setIsNameCorrect(checkName.result);
-  //   }
-  // };
-
-  // const checkValidationEmail = () => {
-  //   const checkEmail = validation.emailValidation(email);
-  //   if (checkEmail.result === 'error') {
-  //     setIsEmailCorrect(checkEmail.result);
-  //   } else if (checkEmail.result === 'success') {
-  //     setIsEmailCorrect(checkEmail.result);
-  //   }
-  // };
 
   const handleSubmit = () => {
-
+    const formValidation = contactFormValidation(name, email);
+    if(formValidation.validation === false) {
+      showInputError(formValidation.errorField);
+      console.log(formValidation);
+    } else if (formValidation.validation === true) {
+      console.log('submit form');
+    }
   };
 
   const handleClearInputs = () => {
     setName('');
     setEmail('');
+    setNameInputStatus('');
+    setEmailInputStatus('');
   };
 
-  useEffect(() => {
-    if (name.length > 0) {
-      checkValidationData('name', name, setIsNameCorrect);
-    } else {
-      setIsNameCorrect('');
-    }
-  }, [name]);
-
-  useEffect(() => {
-    if (email.length > 0) {
-      checkValidationData('email', email, setIsEmailCorrect);
-      // checkValidationEmail();
-    } else {
-      setIsEmailCorrect('');
-    }
-  }, [email]);
 
   return (
     <form 
@@ -116,14 +71,14 @@ const ContactForm = () => {
         <DataInput
           type={'text'}
           placeholderText={'Your name'}
-          status={isNameCorrect}
+          status={nameInputStatus}
           value={name}
           onValueChange={handleNameChange}
         />
         <DataInput
           type={'email'}
           placeholderText={'Your Email'}
-          status={isEmailCorrect}
+          status={emailInputStatus}
           value={email}
           onValueChange={handleEmailChange}
         />
